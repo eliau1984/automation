@@ -5,13 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FormAutomation {
 
     public static void main(String[] args) {
 
         // הגדרת driver
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        WebDriverManager.chromedriver().setup();
 
         // יצירת driver ל-Chrome
         ChromeOptions options = new ChromeOptions();

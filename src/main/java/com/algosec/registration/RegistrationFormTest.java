@@ -1,5 +1,5 @@
 package com.algosec.registration;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,7 +13,7 @@ public class RegistrationFormTest {
 
     public static void main(String[] args) {
         // הגדרת הנתיב ל-Chromedriver
-        System.setProperty("webdriver.chrome.driver", "C://Users//eliau//.cache//selenium//chromedriver//win64//135.0.7049.84//chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
 
         // הגדרת אפשרויות לדפדפן
         ChromeOptions options = new ChromeOptions();

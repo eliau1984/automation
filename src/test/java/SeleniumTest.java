@@ -4,11 +4,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.sql.*;
 import java.time.Duration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumTest {
 
     public static void main(String[] args) {
         // אתחול של WebDriver
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         // פתח את הדף עם טופס יצירת משתמש
